@@ -1,0 +1,41 @@
+{
+  "fecha_inspeccion": "2026-11-16",
+  "filas_antes_de_limpieza": true,
+  "archivos": [
+    {
+      "archivo": "recipes.parquet",
+      "bytes": 178723234,
+      "filas_fisicas": 522517,
+      "sha256": "9f591abe9f8d1c691bbc630b0431ec6613f09fabe93f1789af87a06484aae9fb"
+    },
+    {
+      "archivo": "reviews.parquet",
+      "bytes": 173762142,
+      "filas_fisicas": 1401982,
+      "sha256": "439da8db7c7af03a368c41957cb56fb6e4f43f0786aa744ecd816a6f959748f0"
+    },
+    {
+      "archivo": "dispositivos.csv",
+      "bytes": 19833,
+      "filas_fisicas": 315,
+      "sha256": "60e5896d1d4dfd25c90ff5eee15b768923667377e32b0d06064b70430c26a6ca"
+    },
+    {
+      "archivo": "comidas.csv",
+      "bytes": 1006514,
+      "filas_fisicas": 22106,
+      "sha256": "13e4273109e3cfff829f3db24f33771e76a28199e0a959e7772c85322e6c4b19"
+    },
+    {
+      "archivo": "sesiones.jsonl",
+      "bytes": 779391,
+      "filas_fisicas": 4840,
+      "sha256": "1a56ce13fe9d2f45080d9d170f96ac4d7f8e6c3fe679401861869e4d3c5835a5"
+    }
+  ],
+  "mediciones": {
+    "disponible": false,
+    "filas": null,
+    "bytes": null
+  }
+}

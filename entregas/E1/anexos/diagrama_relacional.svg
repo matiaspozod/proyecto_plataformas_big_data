@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="478" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 478" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="478"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-478)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 150,410 L 195,410 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 195,410 L 195,334 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="195 334, 197.3971 338.3879, 192.6029 338.3879" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,23%); fill-rule: evenodd;"/>
+			<text x="156" y="418" style="font-family: Sans; font-size: 7.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,836) scale(1,-1)">1 → N</text>
+			<path d="M 360,410 L 315,410 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 315,410 L 315,334 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="315 334, 317.3971 338.3879, 312.6029 338.3879" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,23%); fill-rule: evenodd;"/>
+			<text x="318" y="418" style="font-family: Sans; font-size: 7.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,836) scale(1,-1)">1 → N</text>
+			<path d="M 75,370 L 75,234 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="75 234, 77.39713 238.3879, 72.60287 238.3879" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,23%); fill-rule: evenodd;"/>
+			<text x="82" y="305" style="font-family: Sans; font-size: 7.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,610) scale(1,-1)">1 → N</text>
+			<path d="M 345,280 L 435,280 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 435,280 L 435,234 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="435 234, 437.3971 238.3879, 432.6029 238.3879" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,23%); fill-rule: evenodd;"/>
+			<text x="367" y="288" style="font-family: Sans; font-size: 7.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,576) scale(1,-1)">1 → N</text>
+			<path d="M 75,102 L 75,150 Z" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="75 150, 72.60287 145.6121, 77.39713 145.6121" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,23%); fill-rule: evenodd;"/>
+			<text x="82" y="121" style="font-family: Sans; font-size: 7.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,242) scale(1,-1)">1 → N</text>
+			<rect x="0" y="370" width="150" height="84" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="432" width="150" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="7" y="439" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,878) scale(1,-1)">USUARIO</text>
+			<text x="7" y="418" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,836) scale(1,-1)">AuthorId  PK</text>
+			<text x="7" y="406" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,812) scale(1,-1)">zona_horaria</text>
+			<text x="7" y="394" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,788) scale(1,-1)">300 usuarios vinculados</text>
+			<rect x="360" y="370" width="150" height="84" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="360" y="432" width="150" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="367" y="439" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,878) scale(1,-1)">DISPOSITIVO</text>
+			<text x="367" y="418" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,836) scale(1,-1)">device_id  PK</text>
+			<text x="367" y="406" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,812) scale(1,-1)">modelo</text>
+			<text x="367" y="394" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,788) scale(1,-1)">315 relojes históricos</text>
+			<rect x="165" y="246" width="180" height="88" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="165" y="312" width="180" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="172" y="319" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,638) scale(1,-1)">VINCULACION</text>
+			<text x="172" y="298" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,596) scale(1,-1)">vinculacion_id  PK</text>
+			<text x="172" y="286" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,572) scale(1,-1)">AuthorId  FK; device_id  FK</text>
+			<text x="172" y="274" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,548) scale(1,-1)">inicio; fin; zona_horaria</text>
+			<rect x="0" y="150" width="150" height="84" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="212" width="150" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="7" y="219" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">COMIDA</text>
+			<text x="7" y="198" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,396) scale(1,-1)">comida_id  PK</text>
+			<text x="7" y="186" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,372) scale(1,-1)">AuthorId  FK; RecipeId  FK</text>
+			<text x="7" y="174" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,348) scale(1,-1)">fecha_hora; porciones</text>
+			<rect x="360" y="150" width="150" height="84" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="360" y="212" width="150" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="367" y="219" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">SESION</text>
+			<text x="367" y="198" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,396) scale(1,-1)">session_id  PK</text>
+			<text x="367" y="186" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,372) scale(1,-1)">vinculacion_id  FK</text>
+			<text x="367" y="174" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,348) scale(1,-1)">tipo; inicio; fin; distancia</text>
+			<rect x="0" y="18" width="150" height="84" style="stroke: rgb(9%,16%,23%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="80" width="150" height="22" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,92%,93%); fill-rule: evenodd;"/>
+			<text x="7" y="87" style="font-family: SansB; font-size: 8.5px;fill: rgb(9%,16%,23%); stroke:none;" transform="translate(0,174) scale(1,-1)">RECETA</text>
+			<text x="7" y="66" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,132) scale(1,-1)">RecipeId  PK</text>
+			<text x="7" y="54" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,108) scale(1,-1)">nombre; categoria; nutrientes</text>
+			<text x="7" y="42" style="font-family: Sans; font-size: 7.6px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,84) scale(1,-1)">autor_foodcom_id; tiempos</text>
+			<text x="190" y="160" style="font-family: Sans; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,320) scale(1,-1)">Las mediciones llegan como eventos</text>
+			<text x="190" y="146" style="font-family: Sans; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,292) scale(1,-1)">y se conservan fuera de estas tablas.</text>
+			<text x="190" y="132" style="font-family: Sans; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">Su dueño se resuelve por reloj y tiempo.</text>
+		</g>
+	</g>
+</svg>
