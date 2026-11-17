@@ -1,52 +1,92 @@
-# Actividad física y características de las recetas registradas
+# Proyecto del curso
 
-**Autor:** Matías Pozo Díaz  
-**Curso:** INF3862 · Plataformas Big Data para Data Science  
-**Etapa:** Entrega 1 · 16 de noviembre de 2026
+**Pontificia Universidad Católica de Chile**  
+**INF3862 — Plataformas Big Data para Data Science**
 
-## Objetivo
+## Actividad física y características de las recetas registradas
 
-Comparar, dentro de cada usuario, las características de las recetas registradas entre sus días de mayor y menor actividad física. Se integran recetas Food.com, comidas registradas, dispositivos, sesiones y mediciones del wearable. El resultado final será un dashboard descriptivo; no representa toda la alimentación ni permite atribuir causalidad.
+**Alumno:** Matías Pozo Díaz.
 
-Indicadores propuestos: densidad de proteína y fibra de las recetas (g por 100 kcal) y tiempo de preparación. La comparación usa el historial de cada persona y exige cobertura suficiente del reloj y días comparables en ambos grupos.
+## Caso de uso
 
-## Entregables
+Una aplicación de recetas basada en Food.com incorpora información de relojes inteligentes y permite que sus usuarios registren qué recetas preparan.
 
-| Archivo | Contenido |
+Este proyecto diseña una plataforma de datos para integrar ambas fuentes y construir un dashboard personal. El usuario podrá consultar cómo cambian las características de sus preparaciones entre días de mayor y menor actividad física, y utilizar esa información para planificar sus próximas recetas.
+
+El dashboard combinará:
+
+- **Actividad:** pasos y sesiones registrados por los relojes.
+- **Preparaciones:** recetas registradas por cada usuario y momento del registro.
+- **Características de las recetas:** información nutricional, categorías y tiempos de preparación disponibles en Food.com.
+
+La pregunta principal es:
+
+**¿Cómo varían las características de las recetas que registra un mismo usuario entre sus días de mayor y menor actividad física?**
+
+Inicialmente se compararán la densidad de proteína, la densidad de fibra y el tiempo de preparación. La clasificación de actividad utilizará el historial de cada persona y considerará la disponibilidad de mediciones.
+
+Los resultados describirán asociaciones entre registros de Food.com y datos sintéticos de relojes. No representan toda la alimentación del usuario ni permiten concluir que la actividad física causa cambios en sus elecciones de recetas.
+
+## Decisiones de diseño
+
+La aplicación y el dashboard requieren formas distintas de trabajar con los datos:
+
+| Necesidad | Diseño propuesto | Justificación |
+| --- | --- | --- |
+| Registrar comidas, gestionar relojes y consultar el historial reciente. | Modelo operacional relacional, con claves, restricciones y transacciones. | Estas operaciones leen o modifican pocos registros y necesitan respuestas rápidas y consistentes. |
+| Comparar muchos días y relacionar actividad con recetas. | Modelo analítico con hechos por usuario-día y por comida, y dimensiones de usuario, fecha y receta. | Permite integrar fuentes y calcular agregaciones históricas. |
+| Conservar los datos recibidos y repetir su procesamiento. | Almacenamiento de archivos originales, separado de las tablas preparadas. | Mantiene la trazabilidad y permite revisar errores o modificar reglas. |
+| Consultar las tablas analíticas eficientemente. | Parquet columnar y particiones temporales. | Las consultas utilizan determinadas columnas y períodos del historial. |
+
+El catálogo de Food.com también alimentará la tabla operacional de recetas, utilizada para validar las referencias de las comidas registradas. Este recorrido complementa el flujo hacia el almacenamiento analítico mostrado en el diagrama de arquitectura.
+
+Las mediciones y las comidas se agregarán por separado antes de combinar sus resúmenes diarios. Esto evita multiplicar registros al relacionar varias mediciones con varias comidas del mismo usuario.
+
+## Entregas
+
+| Entrega | Fecha | Contenido |
+| --- | --- | --- |
+| E1 — Diseño de datos | 16 de noviembre de 2026 | Objetivo, fuentes y recepción, modelos OLTP/OLAP, consultas y arquitectura inicial. |
+| E2 — Ingesta y procesamiento | 30 de noviembre de 2026 | Notebook, capas de datos, reglas de calidad, consultas y análisis de rendimiento y escala. |
+| E3 — Datos para el objetivo y arquitectura final | 14 de diciembre de 2026 | Dataset analítico, dashboard, comparación con una referencia y arquitectura con herramientas concretas. |
+
+## Entrega 1
+
+El [informe E1](entregas/E1/informe_E1_Matias_Pozo.pdf) desarrolla los requisitos del enunciado:
+
+1. Objetivo y cinco preguntas guía: resultado, datos, operaciones, exigencias y recursos.
+2. Fuentes: unidad de registro, formato, volumen, recepción, problemas y tratamiento del esquema.
+3. Modelo operacional: entidades, claves, relaciones y una regla que requiere una transacción.
+4. Modelo analítico: granularidad, medidas, dimensiones, ubicación y organización física.
+5. Consultas: tres OLTP, tres OLAP y un caso en la frontera entre ambas cargas.
+6. Arquitectura inicial: fuentes, recepción, almacenamiento y consumo.
+
+El SQL es aproximado y documenta el diseño. La implementación se desarrollará en E2.
+
+## Datos y disponibilidad
+
+Los datos se obtienen desde Canvas. Las instrucciones de ubicación y selección de la muestra están en [datos/README.md](datos/README.md). Los datasets no se incluyen en el repositorio.
+
+Se inspeccionaron los archivos de recetas, dispositivos, comidas y sesiones. Se identificaron 48 sesiones repetidas y 48 comidas cuyo identificador de receta no aparece en el catálogo.
+
+La carpeta de mediciones no estuvo disponible durante la preparación de E1. Su estructura se documentó a partir del diccionario del curso y de una captura de pantalla. Su volumen y calidad reales quedan pendientes de verificación.
+
+Las cantidades observadas se distinguen de los supuestos de crecimiento y de los objetivos de rendimiento.
+
+## Archivos del proyecto
+
+| Ubicación | Contenido |
 | --- | --- |
-| [Informe E1](entregas/E1/informe_E1_Matias_Pozo.pdf) | Tres páginas de informe principal y nueve páginas de anexos identificados A-I. |
-| [Fuente editable](entregas/E1/informe_E1.md) | Texto y tablas del informe, consultas y referencias a los diagramas. |
-| [Consultas](entregas/E1/anexos/consultas.sql) | Tres consultas OLTP, tres OLAP y un caso frontera; SQL aproximado. |
-| [Diagrama relacional](entregas/E1/anexos/diagrama_relacional.svg) | Entidades, claves y relaciones operacionales. |
-| [Arquitectura inicial](entregas/E1/anexos/arquitectura_inicial.svg) | Fuentes, recepción, almacenamiento y consumo. |
-| [Datos](datos/README.md) | Origen, ubicación local, disponibilidad y límites de los datos. |
-| [Registro de decisiones](decisiones.md) | Decisiones iniciales, alternativas y motivos. |
+| [entregas/E1/informe_E1_Matias_Pozo.pdf](entregas/E1/informe_E1_Matias_Pozo.pdf) | Informe y anexos de E1. |
+| [entregas/E1/informe_E1.md](entregas/E1/informe_E1.md) | Fuente editable del contenido. |
+| [entregas/E1/anexos/consultas.sql](entregas/E1/anexos/consultas.sql) | Consultas y justificaciones operacionales y analíticas. |
+| [entregas/E1/anexos/](entregas/E1/anexos/) | Diagramas del modelo operacional y la arquitectura. |
+| [datos/README.md](datos/README.md) | Obtención, ubicación y selección de los datos. |
+| [datos/inventario_fuentes.json](datos/inventario_fuentes.json) | Conteos, tamaños y hashes de los archivos inspeccionados. |
+| [decisiones.md](decisiones.md) | Decisiones, alternativas consideradas y motivos. |
 
-## Alcance de E1
+## Ejecución y siguientes etapas
 
-Esta entrega contiene diseño, consultas conceptuales y una inspección básica de los archivos disponibles. No incluye un pipeline ni exige ejecutar el SQL. Los tiempos de respuesta son objetivos de diseño; el crecimiento de la aplicación es un escenario explícito, no una medición.
+E1 no requiere ejecutar un pipeline. Desde E2 se incorporarán el notebook, `pyproject.toml`, `uv.lock` y las instrucciones para preparar el entorno y reproducir el procesamiento.
 
-Se verificaron los conteos y tamaños de recetas, reseñas, dispositivos, comidas y sesiones. Se detectaron 48 sesiones repetidas y 48 comidas sin receta en el catálogo. La carpeta de mediciones no estuvo disponible para inspección: su volumen, cobertura y calidad reales están pendientes. El modelo de recepción se basa en el diccionario del profesor y la captura de su estructura.
-
-Los umbrales de cobertura y clasificación se revisarán en E2 si la muestra no permite comparaciones suficientes. No se ha generado una tabla analítica ni se presentan resultados de actividad física.
-
-## Reproducibilidad y siguientes etapas
-
-- Los datasets se obtienen desde Canvas y se mantienen fuera del repositorio; ver `datos/README.md`.
-- El inventario de los archivos inspeccionados y sus hashes está en `datos/inventario_fuentes.json`.
-- E2 incorporará un notebook ejecutable, reglas de limpieza y las consultas A1-A3 sobre tablas analíticas.
-- Desde E2 se incluirán `pyproject.toml` y `uv.lock`, con instrucciones para `uv sync` y `uv run`. No se incluyen entornos vacíos ni comandos de ejecución de un pipeline inexistente en E1.
-- E3 desarrollará el dashboard, su referencia histórica y la arquitectura con herramientas concretas.
-
-## Publicación de la entrega
-
-1. Crear un repositorio **público** de GitHub para este proyecto.
-2. Subir el contenido de esta carpeta conservando la organización. No subir datasets ni el ZIP completo como único entregable.
-3. Comprobar desde el repositorio que el PDF se puede abrir y que el README enlaza a él.
-4. Registrar el enlace del repositorio en el Excel indicado en Canvas por el profesor.
-
-El enunciado fija el cierre de E1 el 16 de noviembre de 2026 a las 23:59. Este paquete prepara los archivos; su creación no implica que se hayan publicado en GitHub o registrado en el Excel.
-
-## Referencias
-
-Enunciado del proyecto INF3862, clases 0 y 1, LEEME general y diccionario del wearable proporcionados por el profesor. Catálogo Food.com: [Recipes and Reviews](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews), licencia CC0 según el LEEME del curso. Datos del wearable sintéticos, creados por el equipo docente.
+Las decisiones iniciales se revisarán al trabajar con las mediciones reales. Los cambios y sus motivos quedarán registrados en `decisiones.md`.
